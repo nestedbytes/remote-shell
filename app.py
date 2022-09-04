@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask,render_template
 import subprocess
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
-    return 'Welcome to remote shell dashboard!'
+def dashboard():
+    return render_template('index.html')
    
 
 @app.route('/ex/<string:c>/<string:p>')
