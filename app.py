@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    return 'Welcome to remote shell dashboard!'
    
 
 @app.route('/ex/<string:c>/<string:p>')
@@ -23,7 +23,9 @@ def main2(c):
     op2 = ' '.join([str(elem) for elem in lines2])
     return op2
     
-
+@app.route('/console')
+def cons():
+    
 
 
 if __name__ == "__main__":
