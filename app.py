@@ -23,8 +23,7 @@ def main2(c):
     op2 = ' '.join([str(elem) for elem in lines2])
     return op2
     
-@app.route('/console')
-def cons():
+
     
 
 
