@@ -6,7 +6,7 @@ app = Flask(__name__)
   
 @app.route('/')
 def index():
-    return 'The dashboard of the api'
+    return render_template("index.html")
    
 
    
