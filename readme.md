@@ -8,4 +8,9 @@ git clone https://github.com/shourgamer2/remote-shell
 ```
 then cd to the api folder then do this:
 ```sh
+pip install flask
+```
+then to run it
+```sh
+flask run
 ```
