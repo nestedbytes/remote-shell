@@ -5,15 +5,12 @@ This is an api which can execute commands on your local machine from the web
 Python <br>
 Flask
 ### Host instructions
-clone:
+# Linux
 ```sh
-git clone https://github.com/shourgamer2/remote-shell
+wget https://raw.githubusercontent.com/shourdev/remote-shell/main/scripts/linux.sh
 ```
-then cd to the api folder then do this:
 ```sh
-pip install flask
+bash linux.sh
 ```
-then to run it
-```sh
-flask run
-```
+# Windows
+TBA
