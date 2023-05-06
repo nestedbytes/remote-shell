@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask
 import subprocess
 app = Flask(__name__)
 
@@ -6,8 +6,11 @@ app = Flask(__name__)
   
 @app.route('/')
 def index():
-    return render_template("index.html")
-   
+    return 'Dashboard'
+    return 'Use with no args'
+    return '{host}/ex2/{command}'
+    return 'Use with one arg'
+    return '{host}/ex/{command}/{arg}'
 
    
 
