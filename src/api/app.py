@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,render_template_string
 import subprocess
 app = Flask(__name__)
 
@@ -6,13 +6,22 @@ app = Flask(__name__)
   
 @app.route('/')
 def index():
-    return 'Dashboard'
-    return 'Use with no args'
-    return '{host}/ex2/{command}'
-    return 'Use with one arg'
-    return '{host}/ex/{command}/{arg}'
+    return render_template_string('''<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css url"/>
+    </head>
+    <body>
+       <h1> Dashboard </h1>
+        <p>One argument</p> <br>
+        <p> {host}/ex/{command}/{arg} </p>
+       <p> No arguments </p>  <br>
+      <p> {host}/ex2/{command} </p>
+    </body>
+</html>
+'''
 
-   
+   )
 
 @app.route('/ex/<string:c>/<string:p>')
 def main(c,p):
@@ -34,6 +43,3 @@ def main2(c):
 
 if __name__ == "__main__":
     app.run(debug=False,host='0.0.0.0')
-    
-  
-
