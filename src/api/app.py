@@ -14,8 +14,9 @@ def index():
     <body>
        <h1> Dashboard </h1>
         <p>Run command</p> <br>
-        <p> {host}/ex/{command}/{arg} </p>
-      
+        <p> {host}/ex/{command}/{arg}/ </p> <br>
+         <p> API: </p> <br>
+ <p> {host}/ex/ </p>      
     </body>
 </html>
 '''
