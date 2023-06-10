@@ -2,7 +2,7 @@ from flask import Flask,render_template_string
 import subprocess
 app = Flask(__name__)
 
-
+passw = "" # set your password here
   
 @app.route('/')
 def index():
@@ -14,7 +14,7 @@ def index():
     <body>
        <h1> Dashboard </h1>
         <p>Run command</p> <br>
-        <p> {host}/ex/{command}/{arg}/ </p> <br>
+        <p> {host}/ex/{password}/{command}/{arg}/ </p> <br>
          <p> API: </p> <br>
  <p> {host}/ex/ </p>      
     </body>
@@ -23,13 +23,17 @@ def index():
 
    )
 
-@app.route('/ex/<path:args>')
-def main(args):
-    cmd = args.split('/')
-    result = subprocess.run(cmd, stdout=subprocess.PIPE)
-    lines = result.stdout.splitlines()
-    op = ' '.join([elem.decode() for elem in lines])
-    return op
+@app.route('/ex/<string:password>/<path:args>')
+def main(password,args):
+    if password == passw:
+        
+        cmd = args.split('/')
+        result = subprocess.run(cmd, stdout=subprocess.PIPE)
+        lines = result.stdout.splitlines()
+        op = ' '.join([elem.decode() for elem in lines])
+        return op
+    else:
+        return "wrong password"
 
 
 
