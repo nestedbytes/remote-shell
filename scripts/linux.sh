@@ -5,7 +5,7 @@ sudo apt-get update
 echo 'Installing curl'
 sudo apt-get install curl
 echo 'Downloading script'
-curl -o app.py https://raw.githubusercontent.com/shourdev/remote-shell/main/src/api/app.py
+curl -o app.py https://raw.githubusercontent.com/shourdev/remote-shell/main/src/app.py
 echo 'Installing requirements'
 sudo apt-get install python3
 sudo apt-get install python3-pip python-dev
